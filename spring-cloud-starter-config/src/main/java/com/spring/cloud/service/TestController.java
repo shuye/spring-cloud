@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 class TestController {
-    @Value("${from}")
+    @Value("${spring.datasource.url}")
     private String from;
     @RequestMapping("/from")
     public String from() {
