@@ -1,4 +1,4 @@
-package com.spring.cloud.service;
+package com.spring.cloud.service.interfaces;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
