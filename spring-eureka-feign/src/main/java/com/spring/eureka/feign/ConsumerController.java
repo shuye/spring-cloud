@@ -10,10 +10,17 @@ public class ConsumerController {
 
     @Autowired
     ComputeClient computeClient;
+    @Autowired
+    UserClient userClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add() {
         return computeClient.add(10, 20);
+    }
+    
+    @RequestMapping(value = "/getByName", method = RequestMethod.GET)
+    public User getByName(String name) {
+        return userClient.getByName(name);
     }
 
 }
