@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hubay.lang.Page;
+
 @RestController
 public class ConsumerController {
 
@@ -22,5 +24,12 @@ public class ConsumerController {
     public User getByName(String name) {
         return userClient.getByName(name);
     }
+    
+    @RequestMapping(value = "/queryPage", method = RequestMethod.GET)
+    public Page<User> queryPage(Integer pageSize) {
+        return userClient.queryPage(pageSize);
+    }
+    
+    
 
 }
